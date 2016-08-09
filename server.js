@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-var url = 'mongodb://localhost:27017/GEO_LOCATION'
+// var url = 'mongodb://localhost:27017/GEO_LOCATION'
+var url = "mongodb://heroku_ml24917q:3githeg7654gr84mrav2087ssu@ds145355.mlab.com:45355/heroku_ml24917q";
+
 mongodb.MongoClient.connect(process.env.MONGODB_URI || url, function (err, database) {
   if (err) {
     console.log(err);
@@ -25,7 +27,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || url, function (err, datab
   db = database;
   console.log("Database connection ready");
 
-  var server = app.listen(process.env.PORT || 3000, function () {
+  var server = app.listen(process.env.PORT || 80, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
