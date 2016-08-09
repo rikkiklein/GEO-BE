@@ -42,7 +42,7 @@ function handleError(res, reason, message, code) {
 
 /********************************CHARACTER***************************************/
   /***************ADD TO CHARACTER COLLECTION***********************/
-  app.get('/locations', function(request, response){
+  app.get('/', function(request, response){
     response.json("WELCOME TO GEO");
   }); // end app.get
 
