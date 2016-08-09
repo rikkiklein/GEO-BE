@@ -42,6 +42,11 @@ function handleError(res, reason, message, code) {
 
 /********************************CHARACTER***************************************/
   /***************ADD TO CHARACTER COLLECTION***********************/
+  app.get('/locations', function(request, response){
+    response.json("WELCOME TO GEO");
+  }); // end app.get
+
+
   app.post("/locations", function(request, response){
    console.log("######### ADD TO LOCATIONS: APP.POST ###########");
    var newLocation = request.body;
